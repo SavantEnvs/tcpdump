@@ -1,0 +1,8 @@
+project: savantenvs/tcpdump
+target: tcpdump-tcpmd5
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/tcpdump-tcpmd5/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/out/tcpdump -n -vvv -M tcpmd5test -r @@
+    timeout: 5

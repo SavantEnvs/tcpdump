@@ -1,0 +1,8 @@
+project: savantenvs/tcpdump
+target: tcpdump-rtp
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/tcpdump-rtp/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/out/tcpdump -n -vvv -T rtp -r @@
+    timeout: 5

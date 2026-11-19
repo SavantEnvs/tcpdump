@@ -1,0 +1,8 @@
+project: savantenvs/tcpdump
+target: tcpdump-zmtp1
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/tcpdump-zmtp1/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/out/tcpdump -n -vvv -T zmtp1 -r @@
+    timeout: 5

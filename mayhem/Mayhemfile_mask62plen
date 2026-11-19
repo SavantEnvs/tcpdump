@@ -1,0 +1,8 @@
+project: savantenvs/tcpdump
+target: mask62plen
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/mask62plen/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/out/fuzz_mask62plen
+    libfuzzer: true

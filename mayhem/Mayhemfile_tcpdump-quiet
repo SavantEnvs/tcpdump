@@ -1,0 +1,8 @@
+project: savantenvs/tcpdump
+target: tcpdump-quiet
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/tcpdump-quiet/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/out/tcpdump -n -q -r @@
+    timeout: 5
